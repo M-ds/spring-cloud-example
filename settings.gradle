@@ -1,1 +1,9 @@
 rootProject.name = 'spring-cloud-example'
+
+include(
+        "application:cloud-config",
+        "application:company-service",
+        "application:employee-service",
+        "application:product-service",
+        "application:service-registry"
+)
