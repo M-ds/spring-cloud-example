@@ -3,10 +3,10 @@ server:
 
 spring:
   application:
-    name: cloud-config
+    name: CLOUD-CONFIG
   cloud:
     config:
       server:
         git:
-          uri: /home/michiel/Documents/personal/spring-cloud-example
+          uri: https://github.com/M-ds/spring-cloud-example
           clone-on-start: true

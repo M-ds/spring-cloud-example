@@ -1,0 +1,15 @@
+server:
+  port: 9191
+
+spring:
+  application:
+    name: ZUUL-SERVER
+
+zuul:
+  routes:
+    company:
+      path: /company/**
+      serviceId: COMPANY-SERVICE
+    employee:
+      path: /employee/**
+      serviceId: EMPLOYEE-SERVICE

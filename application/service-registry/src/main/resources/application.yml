@@ -1,6 +1,10 @@
 server:
   port: 8761
 
+spring:
+  application:
+    name: SERVICE-REGISTRY
+
 # No need to register the service to itself.
 eureka:
   client:
