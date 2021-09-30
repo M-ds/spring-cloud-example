@@ -1,0 +1,12 @@
+server:
+  port: 9296
+
+spring:
+  application:
+    name: cloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: /home/michiel/Documents/personal/spring-cloud-example
+          clone-on-start: true
