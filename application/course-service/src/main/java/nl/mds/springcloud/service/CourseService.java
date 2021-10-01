@@ -11,7 +11,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 public class CourseService {
@@ -41,5 +44,10 @@ public class CourseService {
 
         courseRepository.save(convertedCourseVo);
         return true; // saved entity will just be returned by default. Therefore, no need to check if this is not null.
+    }
+
+    public List<CourseDto> findAllCourses(List<UUID> courseUuid) {
+        var foundCourses = courseRepository.findAllById(courseUuid);
+        return foundCourses.stream().map(Converter::convertToDto).collect(Collectors.toList());
     }
 }

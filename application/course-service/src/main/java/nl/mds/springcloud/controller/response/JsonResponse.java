@@ -1,4 +1,4 @@
-package nl.mds.springcloud.controller;
+package nl.mds.springcloud.controller.response;
 
 import nl.mds.springcloud.controller.domain.CourseDto;
 
