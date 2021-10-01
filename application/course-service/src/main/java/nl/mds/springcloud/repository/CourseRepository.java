@@ -1,0 +1,11 @@
+package nl.mds.springcloud.repository;
+
+import nl.mds.springcloud.repository.domain.Course;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.UUID;
+
+@Repository
+public interface CourseRepository extends JpaRepository<Course, UUID> {
+}

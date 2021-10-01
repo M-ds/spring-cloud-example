@@ -8,8 +8,8 @@ spring:
 zuul:
   routes:
     company:
-      path: /company/**
-      serviceId: COMPANY-SERVICE
+      path: /course/**
+      serviceId: course-service
     employee:
       path: /employee/**
       serviceId: EMPLOYEE-SERVICE

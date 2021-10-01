@@ -2,9 +2,9 @@ rootProject.name = 'spring-cloud-example'
 
 include(
         "application:cloud-config",
-        "application:company-service",
-        "application:employee-service",
-        "application:product-service",
+        "application:course-service",
+        "application:student-service",
+        "application:school-service",
         "application:service-registry",
         "application:zuul-server"
 )
