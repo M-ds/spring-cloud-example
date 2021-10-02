@@ -23,6 +23,4 @@ public class StudentController {
         return StudentResponse.from(studentWithCourses);
     }
 
-    private void from(StudentWithCourses studentWithCourses) {
-    }
 }
