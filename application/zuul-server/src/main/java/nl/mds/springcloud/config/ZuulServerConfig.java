@@ -10,6 +10,7 @@ public class ZuulServerConfig {
 
     @Bean
     public WebMvcConfigurer corsConfigure() {
+        // This enables us to allow CorsMappings from the frontend to the backend.
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {

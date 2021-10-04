@@ -46,8 +46,23 @@ public class CourseService {
         return true; // saved entity will just be returned by default. Therefore, no need to check if this is not null.
     }
 
-    public List<CourseDto> findAllCourses(List<UUID> courseUuid) {
-        var foundCourses = courseRepository.findAllById(courseUuid);
+    public List<CourseDto> findAllCourses(List<String> courseIds) {
+        List<UUID> courseUuids = convertToUuidList(courseIds);
+        var foundCourses = courseRepository.findAllById(courseUuids);
         return foundCourses.stream().map(Converter::convertToDto).collect(Collectors.toList());
+    }
+
+    private List<UUID> convertToUuidList(List<String> courseIds) {
+        List<UUID> convertedList = new ArrayList<>();
+        for (String id : courseIds) {
+            String cleanedId = removeInvalidCharacters(id);
+            convertedList.add(UUID.fromString(cleanedId));
+        }
+        return convertedList;
+    }
+
+    private String removeInvalidCharacters(String id) {
+        // only keep letters, numbers and -
+        return id.toLowerCase().replaceAll("[^a-z0-9-]", "");
     }
 }

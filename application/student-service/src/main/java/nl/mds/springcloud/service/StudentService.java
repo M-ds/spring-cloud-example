@@ -49,7 +49,7 @@ public class StudentService {
         Map<String, List<String>> paramMap = new HashMap<>();
         List<String> courseIds = new ArrayList<>();
 
-        studentCourses.forEach(studentCourse -> courseIds.add(studentCourse.getCourse_id().toString()));
+        studentCourses.forEach(studentCourse -> courseIds.add(studentCourse.getCourseId().toString()));
         paramMap.put("courseIds", courseIds);
 
         return paramMap;

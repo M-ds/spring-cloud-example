@@ -24,16 +24,16 @@ public class StudentCourse {
 
     @Type(type = "uuid-char")
     @Column(name = "course_id")
-    private UUID course_id;
+    private UUID courseId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "student_id")
     @JsonIgnore
     private Student student;
 
-    public StudentCourse(int id, UUID course_id, Student student) {
+    public StudentCourse(int id, UUID courseId, Student student) {
         this.id = id;
-        this.course_id = course_id;
+        this.courseId = courseId;
         this.student = student;
     }
 
@@ -48,12 +48,12 @@ public class StudentCourse {
         this.id = id;
     }
 
-    public UUID getCourse_id() {
-        return course_id;
+    public UUID getCourseId() {
+        return courseId;
     }
 
-    public void setCourse_id(UUID course_id) {
-        this.course_id = course_id;
+    public void setCourseId(UUID course_id) {
+        this.courseId = course_id;
     }
 
     public Student getStudent() {
