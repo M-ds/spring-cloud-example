@@ -4,7 +4,6 @@ include(
         "application:cloud-config",
         "application:course-service",
         "application:student-service",
-        "application:school-service",
         "application:service-registry",
         "application:zuul-server"
 )
